@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://WebServices/" xmlns:tns="http://WebServices/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="calculateSum" nillable="true" type="tns:calculateSum"/>
+
+  <xs:element name="calculateSumResponse" nillable="true" type="tns:calculateSumResponse"/>
+
+  <xs:complexType name="calculateSum">
+    <xs:sequence>
+      <xs:element name="num1" type="xs:int"/>
+      <xs:element name="num2" type="xs:int"/>
+      <xs:element name="op" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculateSumResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
